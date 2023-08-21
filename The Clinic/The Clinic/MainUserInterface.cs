@@ -314,7 +314,6 @@ namespace The_Clinic
             lblHeader.BackColor = color;
             CurrentButton.BackColor = color;
             pnlHomeScreen.BackColor = color;
-            _Color = color;
         }
 
         public void ActiveButton(object sender)
@@ -324,9 +323,9 @@ namespace The_Clinic
                 if (CurrentButton != (Button)sender)
                 {
                     DisableButton();
-                    Color color = selectThemeColor();
+                    _Color = selectThemeColor();
                     CurrentButton = (Button)sender;
-                    _SetThemeColor(color);
+                    _SetThemeColor(_Color);
                 }
             }
         }
@@ -513,31 +512,38 @@ namespace The_Clinic
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender);
-            _SetHeaderFormat("The Clinic", Properties.Resources.LogoClinic , btnSettings.BackColor);
+               ActiveButton(sender);
+               _SetHeaderFormat("The Clinic", Properties.Resources.LogoClinic, btnSettings.BackColor);
 
-            pnlHomeScreen.Visible = true;
+               pnlHomeScreen.Visible = false;
 
-            if (PatientContainerExpand == false)
-                PatientTimer.Start();
+               if (PatientContainerExpand == false)
+                   PatientTimer.Start();
 
-            if (DoctorContainerExpand == false)
-                DoctorTimer.Start();
+               if (DoctorContainerExpand == false)
+                   DoctorTimer.Start();
 
-            if (AppointmentContainerExpand == false)
-                AppointmentTimer.Start();
+               if (AppointmentContainerExpand == false)
+                   AppointmentTimer.Start();
 
-            if (PaymentContainerExpand == false)
-                PaymentTimer.Start();
+               if (PaymentContainerExpand == false)
+                   PaymentTimer.Start();
 
-            Settingsfrm frm = new Settingsfrm(_Color, "Settings", Properties.Resources.settings1 , _CurrentUser , this);
-            frm.MdiParent = this;
-            frm.TopLevel = false;
-            Settings.Controls.Add(frm);
-            Settings.Visible = true;
-            HomeTab.SelectedPage = Settings;
-            frm.Show();
+               if (UserContainerExpand == false)
+                   UserTimer.Start();
 
+            if (Settings.Visible == false)
+            {
+                Settingsfrm frm = new Settingsfrm(btnSettings.BackColor, "Settings", Properties.Resources.settings1, _CurrentUser, this);
+                frm.MdiParent = this;
+                frm.TopLevel = false;
+                Settings.Controls.Add(frm);
+                Settings.Visible = true;
+                HomeTab.SelectedPage = Settings;
+                frm.Show();
+            }
+            else
+                HomeTab.SelectedPage = Settings;
 
         }
 
@@ -546,13 +552,19 @@ namespace The_Clinic
             ActiveButton(sender);
             _SetHeaderFormat("The Clinic", Properties.Resources.LogoClinic , btnFindPatient.BackColor);
 
-            FindPatientfrm frm = new FindPatientfrm(_Color , "Find Patient", Properties.Resources.FindPatient);
-            frm.MdiParent = this;
-            frm.TopLevel = false;
-            FindPatient.Controls.Add(frm);
-            FindPatient.Visible = true;
-            HomeTab.SelectedPage = FindPatient;
-            frm.Show(); 
+            if (FindPatient.Visible == false)
+            {
+                FindPatientfrm frm = new FindPatientfrm(btnFindPatient.BackColor, "Find Patient", Properties.Resources.FindPatient);
+                frm.MdiParent = this;
+                frm.TopLevel = false;
+                FindPatient.Controls.Add(frm);
+                FindPatient.Visible = true;
+                HomeTab.SelectedPage = FindPatient;
+                frm.Show();
+            }
+            else
+                HomeTab.SelectedPage = FindPatient;
+
         }
 
         private void btnAddPatient_Click(object sender, EventArgs e)
@@ -560,14 +572,18 @@ namespace The_Clinic
             ActiveButton(sender);
             _SetHeaderFormat("The Clinic", Properties.Resources.LogoClinic , btnAddPatient.BackColor);
 
-            AddNewPatientfrm frm = new AddNewPatientfrm(_Color, "Add Patient" , Properties.Resources.AddPatient);
-            frm.MdiParent = this;
-            frm.TopLevel = false;
-            AddPatient.Controls.Add(frm);
-            AddPatient.Visible = true;
-            HomeTab.SelectedPage = AddPatient;
-            frm.Show();
-
+            if (AddPatient.Visible == false)
+            {
+                AddNewPatientfrm frm = new AddNewPatientfrm(btnAddPatient.BackColor, "Add Patient", Properties.Resources.AddPatient);
+                frm.MdiParent = this;
+                frm.TopLevel = false;
+                AddPatient.Controls.Add(frm);
+                AddPatient.Visible = true;
+                HomeTab.SelectedPage = AddPatient;
+                frm.Show();
+            }
+            else
+                HomeTab.SelectedPage = AddPatient;
         }
 
         private void btnUpdatePatient_Click(object sender, EventArgs e)
@@ -575,13 +591,18 @@ namespace The_Clinic
             ActiveButton(sender);
             _SetHeaderFormat("The Clinic", Properties.Resources.LogoClinic, btnUpdatePatient.BackColor);
 
-            UpdatePatientfrm frm = new UpdatePatientfrm(_Color, "UpdatePaitent", Properties.Resources.UpdatePatient);
-            frm.MdiParent = this;
-            frm.TopLevel = false;
-            UpdatePatient.Controls.Add(frm);
-            UpdatePatient.Visible = true;
-            HomeTab.SelectedPage = UpdatePatient;
-            frm.Show();
+            if (UpdatePatient.Visible == false)
+            {
+                UpdatePatientfrm frm = new UpdatePatientfrm(btnUpdatePatient.BackColor, "UpdatePaitent", Properties.Resources.UpdatePatient);
+                frm.MdiParent = this;
+                frm.TopLevel = false;
+                UpdatePatient.Controls.Add(frm);
+                UpdatePatient.Visible = true;
+                HomeTab.SelectedPage = UpdatePatient;
+                frm.Show();
+            }
+            else
+                HomeTab.SelectedPage = UpdatePatient;
         }
 
         private void btnGetAllPatients_Click(object sender, EventArgs e)
@@ -589,13 +610,18 @@ namespace The_Clinic
             ActiveButton(sender);
             _SetHeaderFormat("The Clinic", Properties.Resources.LogoClinic, btnGetAllPatients.BackColor);
 
-            AllPatientsfrm frm = new AllPatientsfrm(_Color, "All Patients", Properties.Resources.allPatients);
-            frm.MdiParent = this;
-            frm.TopLevel = false;
-            PatientsList.Controls.Add(frm);
-            PatientsList.Visible = true;
-            HomeTab.SelectedPage = PatientsList;
-            frm.Show();
+            if (PatientsList.Visible == false)
+            {
+                AllPatientsfrm frm = new AllPatientsfrm(btnGetAllPatients.BackColor, "All Patients", Properties.Resources.allPatients);
+                frm.MdiParent = this;
+                frm.TopLevel = false;
+                PatientsList.Controls.Add(frm);
+                PatientsList.Visible = true;
+                HomeTab.SelectedPage = PatientsList;
+                frm.Show();
+            }
+            else
+                HomeTab.SelectedPage = PatientsList;
         }
 
         private void btnFindDoctor_Click(object sender, EventArgs e)
@@ -603,13 +629,18 @@ namespace The_Clinic
             ActiveButton(sender);
             _SetHeaderFormat("The Clinic", Properties.Resources.LogoClinic , btnFindDoctor.BackColor);
 
-            FindDoctorfrm frm = new FindDoctorfrm(_Color, "Find Doctor", Properties.Resources.FindDoctor);
-            frm.MdiParent = this;
-            frm.TopLevel = false;
-            FindDoctor.Controls.Add(frm);
-            FindDoctor.Visible = true;
-            HomeTab.SelectedPage = FindDoctor;
-            frm.Show();
+            if (FindDoctor.Visible == false)
+            {
+                FindDoctorfrm frm = new FindDoctorfrm(btnFindDoctor.BackColor, "Find Doctor", Properties.Resources.FindDoctor);
+                frm.MdiParent = this;
+                frm.TopLevel = false;
+                FindDoctor.Controls.Add(frm);
+                FindDoctor.Visible = true;
+                HomeTab.SelectedPage = FindDoctor;
+                frm.Show();
+            }
+            else
+                HomeTab.SelectedPage = FindDoctor;
         }
 
         private void btnAddDoctor_Click(object sender, EventArgs e)
@@ -617,14 +648,18 @@ namespace The_Clinic
             ActiveButton(sender);
             _SetHeaderFormat("The Clinic", Properties.Resources.LogoClinic, btnAddDoctor.BackColor);
 
-            AddNewDoctorfrm frm = new AddNewDoctorfrm(_Color, "Add Doctor", Properties.Resources.AddDoctor);
-            frm.MdiParent = this;
-            frm.TopLevel = false;
-            AddDoctor.Controls.Add(frm);
-            AddDoctor.Visible = true;
-            HomeTab.SelectedPage = AddDoctor;
-            frm.Show();
-
+            if (AddDoctor.Visible == false)
+            {
+                AddNewDoctorfrm frm = new AddNewDoctorfrm(btnAddDoctor.BackColor, "Add Doctor", Properties.Resources.AddDoctor);
+                frm.MdiParent = this;
+                frm.TopLevel = false;
+                AddDoctor.Controls.Add(frm);
+                AddDoctor.Visible = true;
+                HomeTab.SelectedPage = AddDoctor;
+                frm.Show();
+            }
+            else
+                HomeTab.SelectedPage = AddDoctor;
         }
 
         private void btnUpdateDoctor_Click(object sender, EventArgs e)
@@ -632,13 +667,18 @@ namespace The_Clinic
             ActiveButton(sender);
             _SetHeaderFormat("The Clinic", Properties.Resources.LogoClinic,btnUpdateDoctor.BackColor);
 
-            UpdateDoctorfrm frm = new UpdateDoctorfrm(_Color, "Update Doctor", Properties.Resources.UpdateDoctor);
-            frm.MdiParent = this;
-            frm.TopLevel = false;
-            UpdateDoctor.Controls.Add(frm);
-            UpdateDoctor.Visible = true;
-            HomeTab.SelectedPage = UpdateDoctor;
-            frm.Show();
+            if (UpdateDoctor.Visible == false)
+            {
+                UpdateDoctorfrm frm = new UpdateDoctorfrm(btnUpdateDoctor.BackColor, "Update Doctor", Properties.Resources.UpdateDoctor);
+                frm.MdiParent = this;
+                frm.TopLevel = false;
+                UpdateDoctor.Controls.Add(frm);
+                UpdateDoctor.Visible = true;
+                HomeTab.SelectedPage = UpdateDoctor;
+                frm.Show();
+            }
+            else
+                HomeTab.SelectedPage = UpdateDoctor;
         }
 
         private void btnGetAllDoctors_Click(object sender, EventArgs e)
@@ -646,13 +686,18 @@ namespace The_Clinic
             ActiveButton(sender);
             _SetHeaderFormat("The Clinic", Properties.Resources.LogoClinic, btnGetAllDoctors.BackColor);
 
-            AllDoctorsfrm frm = new AllDoctorsfrm(_Color, "All Doctors", Properties.Resources.AllDoctors);
-            frm.MdiParent = this;
-            frm.TopLevel = false;
-            DoctorsList.Controls.Add(frm);
-            DoctorsList.Visible = true;
-            HomeTab.SelectedPage = DoctorsList;
-            frm.Show();
+            if (DoctorsList.Visible == false)
+            {
+                AllDoctorsfrm frm = new AllDoctorsfrm(btnGetAllDoctors.BackColor, "All Doctors", Properties.Resources.AllDoctors);
+                frm.MdiParent = this;
+                frm.TopLevel = false;
+                DoctorsList.Controls.Add(frm);
+                DoctorsList.Visible = true;
+                HomeTab.SelectedPage = DoctorsList;
+                frm.Show();
+            }
+            else
+                HomeTab.SelectedPage = DoctorsList;
         }
 
         private void btnFindAppointment_Click(object sender, EventArgs e)
@@ -660,13 +705,18 @@ namespace The_Clinic
             ActiveButton(sender);
             _SetHeaderFormat("The Clinic", Properties.Resources.LogoClinic , btnFindAppointment.BackColor);
 
-            FindAppointmentfrm frm = new FindAppointmentfrm(_Color, "Find Appointment", Properties.Resources.FindAppointment);
-            frm.MdiParent = this;
-            frm.TopLevel = false;
-            FindAppointment.Controls.Add(frm);
-            FindAppointment.Visible = true;
-            HomeTab.SelectedPage = FindAppointment;
-            frm.Show();
+            if (FindAppointment.Visible == false)
+            {
+                FindAppointmentfrm frm = new FindAppointmentfrm(btnFindAppointment.BackColor, "Find Appointment", Properties.Resources.FindAppointment);
+                frm.MdiParent = this;
+                frm.TopLevel = false;
+                FindAppointment.Controls.Add(frm);
+                FindAppointment.Visible = true;
+                HomeTab.SelectedPage = FindAppointment;
+                frm.Show();
+            }
+            else
+                HomeTab.SelectedPage = FindAppointment;
         }
 
         private void btnNewAppointment_Click(object sender, EventArgs e)
@@ -674,13 +724,18 @@ namespace The_Clinic
             ActiveButton(sender);
             _SetHeaderFormat("The Clinic", Properties.Resources.LogoClinic , btnNewAppointment.BackColor);
 
-            AddNewAppointmentfrm frm = new AddNewAppointmentfrm(_Color, "New Appointment" , Properties.Resources.AddAppointment);
-            frm.MdiParent = this;
-            frm.TopLevel = false;
-            AddAppointment.Controls.Add(frm);
-            AddAppointment.Visible = true;
-            HomeTab.SelectedPage = AddAppointment;            
-            frm.Show();
+            if (AddAppointment.Visible == false)
+            {
+                AddNewAppointmentfrm frm = new AddNewAppointmentfrm(btnNewAppointment.BackColor, "New Appointment", Properties.Resources.AddAppointment);
+                frm.MdiParent = this;
+                frm.TopLevel = false;
+                AddAppointment.Controls.Add(frm);
+                AddAppointment.Visible = true;
+                HomeTab.SelectedPage = AddAppointment;
+                frm.Show();
+            }
+            else
+                HomeTab.SelectedPage = AddAppointment;
         }
 
         private void btnUpdateAppointment_Click(object sender, EventArgs e)
@@ -688,13 +743,18 @@ namespace The_Clinic
             ActiveButton(sender);
             _SetHeaderFormat("The Clinic", Properties.Resources.LogoClinic , btnUpdateAppointment.BackColor);
 
-            UpdateAppointmentfrm frm = new UpdateAppointmentfrm(_Color, "Update Appointment", Properties.Resources.UpdateAppointment);
-            frm.MdiParent = this;
-            frm.TopLevel = false;
-            UpdateAppointment.Controls.Add(frm);
-            UpdateAppointment.Visible = true;
-            HomeTab.SelectedPage = UpdateAppointment;
-            frm.Show();
+            if (UpdateAppointment.Visible == false)
+            {
+                UpdateAppointmentfrm frm = new UpdateAppointmentfrm(btnUpdateAppointment.BackColor, "Update Appointment", Properties.Resources.UpdateAppointment);
+                frm.MdiParent = this;
+                frm.TopLevel = false;
+                UpdateAppointment.Controls.Add(frm);
+                UpdateAppointment.Visible = true;
+                HomeTab.SelectedPage = UpdateAppointment;
+                frm.Show();
+            }
+            else
+                HomeTab.SelectedPage = UpdateAppointment;
         }
 
         private void btnAllAppointments_Click(object sender, EventArgs e)
@@ -702,13 +762,18 @@ namespace The_Clinic
             ActiveButton(sender);
             _SetHeaderFormat("The Clinic", Properties.Resources.LogoClinic, btnAllAppointments.BackColor);
 
-            AllAppointmentsfrm frm = new AllAppointmentsfrm(_Color, "All Appointments", Properties.Resources.AllAppointments);
-            frm.MdiParent = this;
-            frm.TopLevel = false;
-            AppointmentsList.Controls.Add(frm);
-            AppointmentsList.Visible = true;
-            HomeTab.SelectedPage = AppointmentsList;
-            frm.Show();
+            if (AppointmentsList.Visible == false)
+            {
+                AllAppointmentsfrm frm = new AllAppointmentsfrm(btnAllAppointments.BackColor, "All Appointments", Properties.Resources.AllAppointments);
+                frm.MdiParent = this;
+                frm.TopLevel = false;
+                AppointmentsList.Controls.Add(frm);
+                AppointmentsList.Visible = true;
+                HomeTab.SelectedPage = AppointmentsList;
+                frm.Show();
+            }
+            else
+                HomeTab.SelectedPage = AppointmentsList;
         }
 
         private void btnUpdatePayment_Click(object sender, EventArgs e)
@@ -716,13 +781,18 @@ namespace The_Clinic
             ActiveButton(sender);
             _SetHeaderFormat("The Clinic", Properties.Resources.LogoClinic , btnUpdatePayment.BackColor);
 
-            UpdatePaymentfrm frm = new UpdatePaymentfrm(_Color, "Update Payment", Properties.Resources.Update_Payment__2_);
-            frm.MdiParent = this;
-            frm.TopLevel = false;
-            UpdatePayment.Controls.Add(frm);
-            UpdatePayment.Visible = true;
-            HomeTab.SelectedPage = UpdatePayment;
-            frm.Show();
+            if (UpdatePayment.Visible == false)
+            {
+                UpdatePaymentfrm frm = new UpdatePaymentfrm(btnUpdatePayment.BackColor, "Update Payment", Properties.Resources.Update_Payment__2_);
+                frm.MdiParent = this;
+                frm.TopLevel = false;
+                UpdatePayment.Controls.Add(frm);
+                UpdatePayment.Visible = true;
+                HomeTab.SelectedPage = UpdatePayment;
+                frm.Show();
+            }
+            else
+                HomeTab.SelectedPage = UpdatePayment;
         }
 
         private void btnPaymentsList_Click(object sender, EventArgs e)
@@ -730,13 +800,19 @@ namespace The_Clinic
             ActiveButton(sender);
             _SetHeaderFormat("The Clinic", Properties.Resources.LogoClinic , btnPaymentsList.BackColor);
 
-            AllPaymentsfrm frm = new AllPaymentsfrm(_Color, "All Payments", Properties.Resources.All_Payments__3_);
-            frm.MdiParent = this;
-            frm.TopLevel = false;
-            PaymentsList.Controls.Add(frm);
-            PaymentsList.Visible = true;
-            HomeTab.SelectedPage = PaymentsList;
-            frm.Show();
+            if (PaymentsList.Visible == false)
+            {
+                AllPaymentsfrm frm = new AllPaymentsfrm(btnPaymentsList.BackColor, "All Payments", Properties.Resources.All_Payments__3_);
+                frm.MdiParent = this;
+                frm.TopLevel = false;
+                PaymentsList.Controls.Add(frm);
+                PaymentsList.Visible = true;
+                HomeTab.SelectedPage = PaymentsList;
+                frm.Show();
+            }
+            else
+                HomeTab.SelectedPage = PaymentsList;
+
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)
@@ -744,13 +820,18 @@ namespace The_Clinic
             ActiveButton(sender);
             _SetHeaderFormat("The Clinic", Properties.Resources.LogoClinic , btnAddUser.BackColor);
 
-            AddUserfrm frm = new AddUserfrm(_Color, "Add User", Properties.Resources.AddUser__2_);
-            frm.MdiParent = this;
-            frm.TopLevel = false;
-            AddUser.Controls.Add(frm);
-            AddUser.Visible = true;
-            HomeTab.SelectedPage = AddUser;
-            frm.Show();
+            if (AddUser.Visible == false)
+            {
+                AddUserfrm frm = new AddUserfrm(btnAddUser.BackColor, "Add User", Properties.Resources.AddUser__2_);
+                frm.MdiParent = this;
+                frm.TopLevel = false;
+                AddUser.Controls.Add(frm);
+                AddUser.Visible = true;
+                HomeTab.SelectedPage = AddUser;
+                frm.Show();
+            }
+            else
+                HomeTab.SelectedPage = AddUser;
         }
 
         private void btnUpdateUser_Click(object sender, EventArgs e)
@@ -758,13 +839,18 @@ namespace The_Clinic
             ActiveButton(sender);
             _SetHeaderFormat("The Clinic", Properties.Resources.LogoClinic  , btnUpdateUser.BackColor);
 
-            UpdateUserfrm frm = new UpdateUserfrm(_Color, "Update User", Properties.Resources.UpdateUser__2_);
-            frm.MdiParent = this;
-            frm.TopLevel = false;
-            UpdateUser.Controls.Add(frm);
-            UpdateUser.Visible = true;
-            HomeTab.SelectedPage = UpdateUser;
-            frm.Show();
+            if (UpdateUser.Visible == false)
+            {
+                UpdateUserfrm frm = new UpdateUserfrm(btnUpdateUser.BackColor, "Update User", Properties.Resources.UpdateUser__2_);
+                frm.MdiParent = this;
+                frm.TopLevel = false;
+                UpdateUser.Controls.Add(frm);
+                UpdateUser.Visible = true;
+                HomeTab.SelectedPage = UpdateUser;
+                frm.Show();
+            }
+            else
+                HomeTab.SelectedPage = UpdateUser;
         }
 
         private void btnUsersList_Click(object sender, EventArgs e)
@@ -772,13 +858,19 @@ namespace The_Clinic
             ActiveButton(sender);
             _SetHeaderFormat("The Clinic", Properties.Resources.LogoClinic , btnUsersList.BackColor);
 
-            AllUsersfrm frm = new AllUsersfrm(_Color, "All Users", Properties.Resources.UsersList__4_);
-            frm.MdiParent = this;
-            frm.TopLevel = false;
-            UsersList.Controls.Add(frm);
-            UsersList.Visible = true;
-            HomeTab.SelectedPage = UsersList;
-            frm.Show();
+            if (UsersList.Visible == false)
+            {
+                AllUsersfrm frm = new AllUsersfrm(btnUsersList.BackColor, "All Users", Properties.Resources.UsersList__4_);
+                frm.MdiParent = this;
+                frm.TopLevel = false;
+                UsersList.Controls.Add(frm);
+                UsersList.Visible = true;
+                HomeTab.SelectedPage = UsersList;
+                frm.Show();
+            }
+            else
+                HomeTab.SelectedPage = UsersList;
+
         }
 
         private void FindPatient_ControlRemoved(object sender, ControlEventArgs e)

@@ -1132,7 +1132,6 @@
             this.HomeTab.Bar.ItemSizing = ComponentFactory.Krypton.Navigator.BarItemSizing.SameWidthAndHeight;
             this.HomeTab.Bar.TabBorderStyle = ComponentFactory.Krypton.Toolkit.TabBorderStyle.SlantOutsizeBoth;
             this.HomeTab.Bar.TabStyle = ComponentFactory.Krypton.Toolkit.TabStyle.LowProfile;
-            this.HomeTab.Button.CloseButtonAction = ComponentFactory.Krypton.Navigator.CloseButtonAction.HidePage;
             this.HomeTab.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide;
             this.HomeTab.Button.NextButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.SelectPage;
             this.HomeTab.Cursor = System.Windows.Forms.Cursors.Hand;
