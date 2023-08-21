@@ -1,6 +1,0 @@
-C:\Users\musta\source\repos\Clinic\clsDataAccessLayer\bin\Debug\clsDataAccessLayer.dll
-C:\Users\musta\source\repos\Clinic\clsDataAccessLayer\bin\Debug\clsDataAccessLayer.pdb
-C:\Users\musta\source\repos\Clinic\clsDataAccessLayer\obj\Debug\ClinicDataAccessLayer.csproj.AssemblyReference.cache
-C:\Users\musta\source\repos\Clinic\clsDataAccessLayer\obj\Debug\ClinicDataAccessLayer.csproj.CoreCompileInputs.cache
-C:\Users\musta\source\repos\Clinic\clsDataAccessLayer\obj\Debug\clsDataAccessLayer.dll
-C:\Users\musta\source\repos\Clinic\clsDataAccessLayer\obj\Debug\clsDataAccessLayer.pdb
