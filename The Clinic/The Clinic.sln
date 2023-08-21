@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The Clinic", "The Clinic\Th
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicDataAccessLayer", "The Clinic\clsDataAccessLayer\ClinicDataAccessLayer.csproj", "{DE161A2C-73D0-4F8B-A1D3-7F1AE7CDC297}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicBusinessLayer", "The Clinic\clsPatient\ClinicBusinessLayer.csproj", "{0816B67C-2C9E-4939-B122-69BCF4A4D1A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicBusinessLayer", "The Clinic\clsBusinessLayer\ClinicBusinessLayer.csproj", "{0816B67C-2C9E-4939-B122-69BCF4A4D1A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

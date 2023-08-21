@@ -536,7 +536,7 @@
     <None Include="Resources\medical-prescription.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="clsPatient\ClinicBusinessLayer.csproj">
+    <ProjectReference Include="clsBusinessLayer\ClinicBusinessLayer.csproj">
       <Project>{0816b67c-2c9e-4939-b122-69bcf4a4d1a5}</Project>
       <Name>ClinicBusinessLayer</Name>
     </ProjectReference>
