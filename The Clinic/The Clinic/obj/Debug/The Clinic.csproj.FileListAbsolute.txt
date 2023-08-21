@@ -1,0 +1,50 @@
+C:\Users\musta\source\repos\The Clinic\The Clinic\bin\Debug\The Clinic.exe
+C:\Users\musta\source\repos\The Clinic\The Clinic\bin\Debug\The Clinic.pdb
+C:\Users\musta\source\repos\The Clinic\The Clinic\bin\Debug\ComponentFactory.Krypton.Docking.dll
+C:\Users\musta\source\repos\The Clinic\The Clinic\bin\Debug\ComponentFactory.Krypton.Navigator.dll
+C:\Users\musta\source\repos\The Clinic\The Clinic\bin\Debug\ComponentFactory.Krypton.Ribbon.dll
+C:\Users\musta\source\repos\The Clinic\The Clinic\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
+C:\Users\musta\source\repos\The Clinic\The Clinic\bin\Debug\ComponentFactory.Krypton.Workspace.dll
+C:\Users\musta\source\repos\The Clinic\The Clinic\bin\Debug\ComponentFactory.Krypton.Docking.pdb
+C:\Users\musta\source\repos\The Clinic\The Clinic\bin\Debug\ComponentFactory.Krypton.Navigator.pdb
+C:\Users\musta\source\repos\The Clinic\The Clinic\bin\Debug\ComponentFactory.Krypton.Ribbon.pdb
+C:\Users\musta\source\repos\The Clinic\The Clinic\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+C:\Users\musta\source\repos\The Clinic\The Clinic\bin\Debug\ComponentFactory.Krypton.Workspace.pdb
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The Clinic.csproj.AssemblyReference.cache
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The Clinic.csproj.SuggestedBindingRedirects.cache
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.Properties.Resources.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The Clinic.csproj.GenerateResource.cache
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The Clinic.csproj.CoreCompileInputs.cache
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The Clinic.csproj.CopyComplete
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The Clinic.exe
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The Clinic.pdb
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.SignInfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.MainUserInterface.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\bin\Debug\clsPatient.dll
+C:\Users\musta\source\repos\The Clinic\The Clinic\bin\Debug\clsDataAccessLayer.dll
+C:\Users\musta\source\repos\The Clinic\The Clinic\bin\Debug\clsPatient.pdb
+C:\Users\musta\source\repos\The Clinic\The Clinic\bin\Debug\clsDataAccessLayer.pdb
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.AddMedicalRecordfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.AddPaymentfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.FindPatientfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.FindDoctorfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.FindAppointmentfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.AddNewPatientfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.AddNewDoctorfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.AddNewAppointmentfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.UpdatePatientfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.UpdateDoctorfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.UpdateAppointmentfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.AllPatientsfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.AllDoctorsfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.AllAppointmentsfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.AllPaymentsfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.UpdatePaymentfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.AddPrescriptionfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.AllMedicalRecordsfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.AllPrescriptionsfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.AddUserfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.AllUsersfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.UpdateUserfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.Settingsfrm.resources
+C:\Users\musta\source\repos\The Clinic\The Clinic\obj\Debug\The_Clinic.UserRegisterationfrm.resources
