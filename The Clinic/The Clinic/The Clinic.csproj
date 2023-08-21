@@ -467,12 +467,6 @@
     <None Include="Resources\appointment.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Clinic\clsPatient\ClinicBusinessLayer.csproj">
-      <Project>{0816b67c-2c9e-4939-b122-69bcf4a4d1a5}</Project>
-      <Name>ClinicBusinessLayer</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\deposit %282%29.png" />
   </ItemGroup>
   <ItemGroup>
@@ -540,6 +534,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\medical-prescription.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="clsPatient\ClinicBusinessLayer.csproj">
+      <Project>{0816b67c-2c9e-4939-b122-69bcf4a4d1a5}</Project>
+      <Name>ClinicBusinessLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

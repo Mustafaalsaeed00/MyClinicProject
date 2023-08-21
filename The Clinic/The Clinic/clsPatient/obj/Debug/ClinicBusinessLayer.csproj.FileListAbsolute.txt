@@ -1,0 +1,9 @@
+C:\Users\musta\source\repos\Clinic\clsPatient\bin\Debug\clsPatient.dll
+C:\Users\musta\source\repos\Clinic\clsPatient\bin\Debug\clsPatient.pdb
+C:\Users\musta\source\repos\Clinic\clsPatient\bin\Debug\clsDataAccessLayer.dll
+C:\Users\musta\source\repos\Clinic\clsPatient\bin\Debug\clsDataAccessLayer.pdb
+C:\Users\musta\source\repos\Clinic\clsPatient\obj\Debug\ClinicBusinessLayer.csproj.AssemblyReference.cache
+C:\Users\musta\source\repos\Clinic\clsPatient\obj\Debug\ClinicBusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\musta\source\repos\Clinic\clsPatient\obj\Debug\ClinicBusinessLayer.csproj.CopyComplete
+C:\Users\musta\source\repos\Clinic\clsPatient\obj\Debug\clsPatient.dll
+C:\Users\musta\source\repos\Clinic\clsPatient\obj\Debug\clsPatient.pdb
